@@ -7,6 +7,7 @@
   --primary-white-color: rgba(255, 255, 255, 1);
   --secondary-back-color: rgba(47, 48, 58, 1);
   --secondary-white-color: rgba(255, 255, 255, 0.6);
+  --background-color: rgba(245, 244, 250, 1);
   --btn-color: rgba(245, 244, 250, 1);
   --btn-color-shadow: rgba(0, 0, 0, 0.15);
   --border-color: rgba(238, 238, 238, 1);
@@ -124,7 +125,7 @@ img {
 /* Герой */
 .hero {
   padding-top: 200px;
-  padding-bottom: 0;
+  padding-bottom: 200px;
 
   background-color: var(--secondary-back-color);
   text-align: center;
@@ -146,7 +147,6 @@ img {
 /* button */
 .btn {
   display: inline-block;
-  margin-bottom: 200px;
   padding: 10px 32px;
 
   background-color: var(--accent-color);
@@ -206,6 +206,9 @@ img {
   margin-top: var(--card-set-gap);
   flex-basis: calc(100% / 3 - var(--card-set-gap));
 }
+.command {
+  background-color: var(--background-color);
+}
 .work-title,
 .command-title {
   margin-bottom: 50px;
@@ -224,11 +227,8 @@ img {
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
   flex-basis: calc(100% / 4 - var(--card-set-gap));
-
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .command-name {
   margin-bottom: 10px;
@@ -271,19 +271,18 @@ img {
   letter-spacing: 0.03em;
   border-radius: 4px;
 }
-.filter {
-  padding-bottom: 50px;
-}
 /* фильтр,портфолио */
 .filter-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .filter-list-item:not(:last-child) {
   margin-right: 8px;
 }
 .portfolio {
-  padding-top: 0;
+  padding-top: 118px;
+  padding-bottom: 70px;
 }
 .portfolio-list {
   display: flex;
@@ -297,17 +296,17 @@ img {
   flex-basis: calc(100% / 3 - var(--card-set-gap));
 }
 .portfolio-title {
-  margin-top: 20px;
   margin-bottom: 4px;
   margin-left: 24px;
 
+  color: var(--primary-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .portfolio-project {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   margin-left: 24px;
 
   color: var(--secondary-text-color);
@@ -315,6 +314,9 @@ img {
   line-height: 1.87;
 }
 .portfolio-subtitle {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   border: 1px solid var(--border-color);
 }
 /* подвал */
@@ -322,7 +324,6 @@ img {
   background-color: var(--secondary-back-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  text-align: ;
 }
 .logo-secondary {
   display: inline-block;
@@ -334,16 +335,18 @@ img {
   font-size: 26px;
   line-height: 1.19;
 }
-.location {
+.location-item {
   display: block;
   margin-bottom: 9px;
+
   color: var(--primary-white-color);
-  line-height: 1.71;
+  font-style: normal;
 }
 .contact-mail,
 .contact-tel {
   display: block;
   color: var(--secondary-white-color);
+  font-style: normal;
 }
 .contact-mail {
   margin-bottom: 9px;
